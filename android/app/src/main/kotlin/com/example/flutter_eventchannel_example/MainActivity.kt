@@ -1,7 +1,7 @@
 package com.example.flutter_eventchannel_example
 
 import android.os.Handler
-import android.util.Log
+//import android.util.Log
 import androidx.annotation.NonNull
 import io.flutter.Log
 import io.flutter.embedding.android.FlutterActivity
@@ -27,6 +27,7 @@ class MainActivity: FlutterActivity() {
                         Log.d("Android", "EventChannel onListen called")
                         Handler().postDelayed({
                             eventSink?.success("Android")
+                            //eventSink?.endOfStream()
                             //eventSink?.error("error code", "error message","error details")
                         }, 500)
                     }
